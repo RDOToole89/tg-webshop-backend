@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import { router as loginRouter } from './routes/loginRoutesTest';
 import { router as productsRouter } from './routes/products';
+import { router as categoriesRouter } from './routes/categories';
 
 import cookieSession from 'cookie-session';
 import cors from 'cors';
@@ -21,6 +22,7 @@ app.get('/', (req: Request, res: Response) => {
 // Routers
 app.use(loginRouter);
 app.use(productsRouter);
+app.use(categoriesRouter);
 
 app.listen(PORT, () => {
   console.log(`Server listening on PORT: ${PORT}...`);
