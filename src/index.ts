@@ -1,4 +1,5 @@
 import express, { Request, Response } from 'express';
+import 'reflect-metadata';
 import { router as loginRouter } from './routes/loginRoutesTest';
 import { router as productsRouter } from './routes/products';
 import { router as categoriesRouter } from './routes/categories';
